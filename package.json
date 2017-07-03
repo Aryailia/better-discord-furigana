@@ -1,0 +1,29 @@
+{
+  "name": "bdfuriganaime",
+  "version": "1.0.0",
+  "description": "BetterDiscord Japanese IME plugin for adding furigana",
+  "main": "index.js",
+  "scripts": {
+    "build": "npm run clean && webpack --watch",
+    "clean": "rimraf dist/*",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Aryailia/BDFuriganaIME.git"
+  },
+  "author": "Aryailia",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/Aryailia/BDFuriganaIME/issues"
+  },
+  "homepage": "https://github.com/Aryailia/BDFuriganaIME#readme",
+  "devDependencies": {
+    "eslint": "^4.1.1",
+    "rimraf": "^2.6.1",
+    "webpack": "^3.0.0"
+  },
+  "dependencies": {
+    "wanakana": "^2.0.2"
+  }
+}

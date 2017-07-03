@@ -1,0 +1,23 @@
+{
+  "env": {
+    "es6": false,
+    "browser": true,
+    "node": true
+  },
+  "extends": "eslint:recommended",
+  "rules": {
+    "no-fallthrough": "off",
+    "indent": ["error", 2, { "SwitchCase": 1, "VariableDeclarator": 2 }],
+    "linebreak-style": ["error", "windows"],
+    "quotes": ["error", "single"],
+    "semi": ["error", "always"],
+    "no-const-assign": "warn",
+    "no-this-before-super": "warn",
+    "no-undef": "warn",
+    "no-unreachable": "warn",
+    "no-unused-vars": "warn",
+    "constructor-super": "warn",
+    "valid-typeof": "warn",
+    "no-console": 0
+  }
+}
