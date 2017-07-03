@@ -1,8 +1,8 @@
 {
-  "name": "bdfuriganaime",
+  "name": "Japanese_Furigana_IME",
   "version": "1.0.0",
   "description": "BetterDiscord Japanese IME plugin for adding furigana",
-  "main": "index.js",
+  "main": "main.js",
   "scripts": {
     "build": "npm run clean && webpack --watch",
     "clean": "rimraf dist/*",
@@ -21,6 +21,7 @@
   "devDependencies": {
     "eslint": "^4.1.1",
     "rimraf": "^2.6.1",
+    "uglifyjs-webpack-plugin": "^0.4.6",
     "webpack": "^3.0.0"
   },
   "dependencies": {
