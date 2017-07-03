@@ -1,0 +1,2 @@
+# BDFuriganaIME
+BetterDiscord Japanese
