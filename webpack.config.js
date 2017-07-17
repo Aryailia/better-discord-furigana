@@ -30,6 +30,9 @@ var bundle = {
     path: path.resolve('./dist'),
     publicPath: '/dist/',
   },
+  externals: {
+    jQuery: 'jQuery',
+  }
 };
 var config = [];
 

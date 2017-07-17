@@ -1,17 +1,18 @@
-//var $ = require('jQuery');
+//var romaaji = require('./constants.js');
 
 var events = {
   load: function () {},
   unload: function () {},
 
   start: function (state) {
-    $(document).on('keydown.furiganaIME', function (e) {
-      console.log(e.keyCode);
+    $(document).on('keypress.furiganaIME', function (ev) {
+      var textinput = document.querySelector('.channel-textarea-inner textarea');
+      console.log(ev.target, ev.keyCode, textinput.value);
     });
   },
 
   stop: function (state) {
-    $(document).off('keydown.furiganaIME');
+    $(document).off('keypress.furiganaIME');
   },
 };
 

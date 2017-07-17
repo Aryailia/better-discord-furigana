@@ -25,6 +25,7 @@
     "webpack": "^3.0.0"
   },
   "dependencies": {
+    "kuromoji": "^0.1.1",
     "wanakana": "^2.0.2"
   }
 }
