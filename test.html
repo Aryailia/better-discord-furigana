@@ -1,0 +1,35 @@
+<html>
+  <head>
+  <meta charset="UTF-8">
+</head> 
+<body>
+  <div class="channel-textarea-inner">
+    <textarea cols="100" rows="10" placeholder="Message #selfbot"></textarea>
+  </div>
+  <script src="dist/furiganaIME.plugin.js"></script>
+  <!--<script src="src/constants.js"></script>-->
+  <!--<script src="src/kuromoji.js"></script>-->
+  <script src="ref/jquery-3.2.1.min.js"></script>
+  <script>
+    new furiganaIME().start();
+    /** 
+     * Note on testing:
+     * - Discord is chrome + node
+     * - Firefox does not register keydown events during conversion phase of a Chinese/Japanese IME
+     * - Chrome does not like the XML requests due to XSS (though it will if it was an extension)
+     *   Kuromoji uses AJAX to get at the 
+     **/ 
+
+    //var textInput = document.querySelector('textarea');
+    //var dict = kuromoji.builder({dicPath: 'src/dic/' });
+    //$(textInput).keydown(function (ev) {
+      /*console.log('asdf', dict.build(function (err, tokenizer) {
+      /  console.log('insider', tokenizer.tokenize(textInput.value));
+        console.log('err', err);
+      }));//*/
+    //});
+    //console.log(textInput);
+    //wanakana.bind(textInput); // IME Mode
+  </script>
+</body>
+</html>
