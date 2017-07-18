@@ -12,11 +12,13 @@ var events = {
 
   start: function (state) {
     new Promise(function (resolve, reject) {
-      kuromoji.builder({dicPath: 'src/dic/' }).builder(function (err, tokenizer) {
+      console.log('furiganaIME', __dirname);
+      kuromoji.builder({dicPath: 'kuromoji/dic/' }).builder(function (err, tokenizer) {
         resolve(tokenizer);
       });
     }).then(function (parser) {
       $(document).on('keydown.furiganaIME', function (ev) {
+        console.log('working1');
         var textInput, text;
 
         // Textinput must start with 'furi:' and need to Ctrl+C to trigger conversion
@@ -24,6 +26,7 @@ var events = {
           textInput = document.querySelector('.channel-textarea-inner textarea');
           if (textInput.value.startsWith('furi:')) {
             text = textInput.value.substr(5);
+            console.log('working2');
             
             // Tokenize and build string form kuromoji output
             var str = parser.then.tokenize(text).map(function (token) {
@@ -40,6 +43,8 @@ var events = {
         }
         //console.log(ev.target, ev.keyCode, textInput.value);
       });
+    }).catch(function (err) {
+      console.log('furiganaIME Error:', err);
     });
   },
 
